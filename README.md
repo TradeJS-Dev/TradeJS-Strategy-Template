@@ -26,3 +26,5 @@ yarn checks
 
 CI and release callers are deliberately thin. The implementation is owned by
 `TradeJS-Workflows` and pinned through its stable `v1` ref.
+
+Keywords: ai, claude, codex.

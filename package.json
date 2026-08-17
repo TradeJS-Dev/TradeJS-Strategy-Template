@@ -3,6 +3,11 @@
   "version": "0.0.0-development",
   "private": true,
   "description": "Repository template for an independently versioned TradeJS strategy package.",
+  "keywords": [
+    "ai",
+    "claude",
+    "codex"
+  ],
   "type": "module",
   "packageManager": "yarn@4.13.0",
   "engines": {
