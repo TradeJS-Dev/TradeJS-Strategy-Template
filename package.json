@@ -1,0 +1,42 @@
+{
+  "name": "@tradejs/strategy-template",
+  "version": "0.0.0-development",
+  "private": true,
+  "description": "Repository template for an independently versioned TradeJS strategy package.",
+  "type": "module",
+  "packageManager": "yarn@4.13.0",
+  "engines": {
+    "node": "24.x"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@tradejs/core": "^3.0.1",
+    "@tradejs/types": "^3.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.2"
+  },
+  "scripts": {
+    "build": "tsup",
+    "format:check": "prettier --check .",
+    "test": "node --test tests/*.test.mjs",
+    "typecheck": "tsc -p ./tsconfig.json --noEmit",
+    "checks": "yarn format:check && yarn typecheck && yarn build && yarn test"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "license": "UNLICENSED"
+}
