@@ -4,6 +4,15 @@
 
 These rules apply to an independent TradeJS strategy repository.
 
+## Workspace Routing
+
+- Start from `~/dev/tradejs/AGENTS.md`; do not scan sibling repositories.
+- Change this repository when the reusable scaffold or package contract for
+  future strategies changes. Change an existing strategy in its own
+  `tradejs-strategy-*` repository instead.
+- Run template tests here. Run generated-project backtests and research from
+  `tradejs-project`; do not store research artifacts in the template.
+
 ## Package contract
 
 - Export `strategyEntries` from the package root.
