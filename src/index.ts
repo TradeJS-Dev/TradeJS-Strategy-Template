@@ -1,10 +1,11 @@
 import { defineStrategyPlugin } from "@tradejs/core/config";
+import { createStrategyConfigParser } from "@tradejs/strategy-kit/config";
+import type { ValidatedStrategyRegistryEntry } from "@tradejs/strategy-kit/config";
 import type {
   CreateStrategyCore,
   Signal,
   StrategyConfig,
   StrategyManifest,
-  StrategyRegistryEntry,
 } from "@tradejs/types";
 
 export const STRATEGY_NAME = "TemplateStrategy";
@@ -81,8 +82,12 @@ const manifest: StrategyManifest = {
   name: STRATEGY_NAME,
 };
 
-const strategyEntry: StrategyRegistryEntry<TemplateStrategyConfig> = {
+const strategyEntry: ValidatedStrategyRegistryEntry<TemplateStrategyConfig> = {
   defaults: defaultConfig,
+  parseConfig: createStrategyConfigParser({
+    strategyName: STRATEGY_NAME,
+    defaults: defaultConfig,
+  }),
   manifest,
   createCore: createTemplateStrategyCore,
 };

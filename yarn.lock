@@ -425,11 +425,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tradejs/strategy-kit@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@tradejs/strategy-kit@npm:3.0.1"
+  dependencies:
+    "@tradejs/core": "npm:^3.0.1"
+    "@tradejs/types": "npm:^3.0.1"
+  checksum: 10c0/425e4e97e5cd1995c9ad32cd6e61bdb098da4b0dde069e90438081e92e0852a2b4757ebf1bd06733b009359dc365c8756155793d1287642cc2f2b8eaa022eef2
+  languageName: node
+  linkType: hard
+
 "@tradejs/strategy-template@workspace:.":
   version: 0.0.0-use.local
   resolution: "@tradejs/strategy-template@workspace:."
   dependencies:
     "@tradejs/core": "npm:^3.0.1"
+    "@tradejs/strategy-kit": "npm:^3.0.1"
     "@tradejs/types": "npm:^3.0.1"
     prettier: "npm:^3.6.2"
     tsup: "npm:^8.5.1"
