@@ -445,6 +445,10 @@ __metadata:
     prettier: "npm:^3.6.2"
     tsup: "npm:^8.5.1"
     typescript: "npm:^5.9.2"
+  peerDependencies:
+    "@tradejs/core": ^3.0.1
+    "@tradejs/strategy-kit": ^3.0.1
+    "@tradejs/types": ^3.0.1
   languageName: unknown
   linkType: soft
 

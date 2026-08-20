@@ -32,3 +32,9 @@ These rules apply to an independent TradeJS strategy repository.
 ## Verification
 
 Run `yarn checks` before every commit.
+
+## Runtime Dependency Contract
+
+- Keep every `@tradejs/*` runtime package in both `peerDependencies` and `devDependencies`, never in `dependencies`.
+- The consuming TradeJS Project must own the exact runtime composition; nested TradeJS package copies are forbidden.
+- Keep the package-contract test in `yarn checks` whenever dependency metadata changes.
