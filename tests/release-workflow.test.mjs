@@ -14,7 +14,7 @@ test("template callers use the beta-first weekly release train", () => {
   assert.match(workflow, /channel: beta/);
   assert.match(workflow, /channel: stable/);
   assert.match(workflow, /cron: "0 4 \* \* 1"/);
-  assert.match(workflow, /confirm-promotion/);
+  assert.doesNotMatch(workflow, /confirm[_-]promotion/);
   assert.match(workflow, /strategy-publish\.yml@v1/);
   assert.doesNotMatch(workflow, /types: \[published\]/);
 });
